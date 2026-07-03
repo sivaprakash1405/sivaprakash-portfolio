@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sivaprakash S - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button id="editBtn" class="edit-btn">Edit Mode: OFF</button>
+    <button id="allSaveBtn" class="edit-btn" style="display:none; bottom: 5.5rem; background: #059669;">All Save</button>
+    
+    <div id="slide1" class="slide active">
+        <div class="hero-content glass-panel">
+            <div class="tags" id="tags-container" data-save-container="tags">
+                <span class="tag">STUDENT</span>
+                <span class="tag">ANALYSER</span>
+            </div>
+            <button class="add-btn" data-type="tag" data-target="tags-container">+ Add Tag</button>
+            
+            <h1 class="name" data-edit="name">SIVAPRAKASH S</h1>
+            <p class="objective" data-edit="objective">To build a career in technology where curiosity, learning, and innovation drive my work. I aspire to use my skills in programming and AI to create smart and efficient solutions. My goal is to grow into a developer and analyser who can contribute to meaningful technological advancements.</p>
+            
+            <div class="social-links" id="social-container" data-save-container="socials">
+                <a href="https://github.com/sivaprakash1405" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/sivaprakash-s-9639b9331" target="_blank">LinkedIn</a>
+            </div>
+            <button class="add-btn" data-type="social" data-target="social-container">+ Add Link</button>
+            
+            <button id="aboutBtn" class="primary-btn">About Me</button>
+        </div>
+    </div>
+
+    <div id="slide2" class="slide">
+        <button id="backBtn" class="back-btn">&larr; Back</button>
+        <div class="about-container glass-panel">
+            <h2 class="about-title" data-edit="about_text">this is Sivaprakash 3rd year persuing student in BE computer science engineering with specified on Artificial Intelligence and Machine Learning, good learning and working,pationate in coding and analysis</h2>
+            
+            <div class="category-buttons">
+                <button class="cat-btn active" data-target="education">Education</button>
+                <button class="cat-btn" data-target="skills">Skills</button>
+                <button class="cat-btn" data-target="projects">Projects</button>
+                <button class="cat-btn" data-target="achievements">Achievements</button>
+                <button class="cat-btn" data-target="info">Info</button>
+            </div>
+
+            <div class="content-display">
+                <!-- Education -->
+                <div id="education" class="cat-content active">
+                    <div id="edu-container" data-save-container="education">
+                        <div class="edu-card relative-card">
+                            <h3 class="big-font">Velalar College of Engineering and Technology, Thindal</h3>
+                            <p class="medium-font">Bachelor of Engineering - Computer Science (AI & ML)</p>
+                            <p class="medium-font">Current-CGPA : 7.87 | 2024 - Present</p>
+                        </div>
+                        <div class="edu-card relative-card">
+                            <h3 class="big-font">Vani Vidhyalaya Matriculation Higher Secondary School, Uppupalayam</h3>
+                            <p class="medium-font">Class XII [State Board] | 2023-2024</p>
+                            <p class="medium-font">Percentage : 75%</p>
+                        </div>
+                    </div>
+                    <button class="add-btn" data-type="education" data-target="edu-container">+ Add Education</button>
+                </div>
+
+                <!-- Skills -->
+                <div id="skills" class="cat-content">
+                    <div class="skills-grid" id="skills-container" data-save-container="skills">
+                        <div class="skill-group relative-card">
+                            <h3>Programming</h3>
+                            <ul>
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>C</li>
+                                <li>SQL (basics)</li>
+                            </ul>
+                            <button class="add-btn small-btn" data-type="skill-item">+ Add Skill</button>
+                        </div>
+                        <div class="skill-group relative-card">
+                            <h3>AI & ML</h3>
+                            <ul>
+                                <li>ML (Intermediate)</li>
+                            </ul>
+                            <button class="add-btn small-btn" data-type="skill-item">+ Add Skill</button>
+                        </div>
+                        <div class="skill-group relative-card">
+                            <h3>Tools</h3>
+                            <ul>
+                                <li>GitHub</li>
+                                <li>n8n</li>
+                                <li>Canva</li>
+                                <li>Antigravity</li>
+                            </ul>
+                            <button class="add-btn small-btn" data-type="skill-item">+ Add Skill</button>
+                        </div>
+                    </div>
+                    <button class="add-btn mt-4" data-type="skill-group" data-target="skills-container">+ Add Skill Group</button>
+                </div>
+
+                <!-- Projects -->
+                <div id="projects" class="cat-content">
+                    <div id="projects-container" data-save-container="projects">
+                        <div class="project-card relative-card">
+                            <h3 class="proj-title">Library Management System (LMS)</h3>
+                            <p class="proj-desc">This Library Management System is a full-stack application that automates book tracking and fine calculations using Flask and SQL. It features a React-based dashboard that triggers automated email reminders for upcoming due dates and calculates late fees in real-time.</p>
+                        </div>
+                        <div class="project-card relative-card">
+                            <h3 class="proj-title">Advanced Utility Response Assistant (AURA)</h3>
+                            <p class="proj-desc">This project uses SpeechRecognition and pyttsx3 to process voice commands into computer actions via Python. It leverages PyAutoGUI to automate mouse movements and clicks, enabling hands-free control of your applications.</p>
+                        </div>
+                    </div>
+                    <button class="add-btn" data-type="project" data-target="projects-container">+ Add Project</button>
+                </div>
+
+                <!-- Achievements -->
+                <div id="achievements" class="cat-content">
+                    <div class="upload-section">
+                        <h3 data-edit="achieve_title">Certificates & Achievements</h3>
+                        <p data-edit="achieve_desc">Upload your certificate photos below to showcase them.</p>
+                        <input type="file" id="certUpload" accept="image/*" multiple>
+                        <label for="certUpload" class="upload-label">Choose Images</label>
+                        <div id="certGallery" class="gallery"></div>
+                    </div>
+                </div>
+
+                <!-- Info -->
+                <div id="info" class="cat-content">
+                    <div id="info-container" data-save-container="info">
+                        <div class="info-group relative-card">
+                            <h3 class="large-font">Languages</h3>
+                            <p class="medium-font">English (Intermediate) <br> Tamil (Native)</p>
+                        </div>
+                        <div class="info-group relative-card">
+                            <h3 class="large-font">Contact Details</h3>
+                            <p class="medium-font">+91 6379147224</p>
+                            <p class="medium-font">sivaprakashsam2006@gmail.com</p>
+                            <p class="medium-font">Veppadai, Namakkal (DT)</p>
+                        </div>
+                    </div>
+                    <button class="add-btn" data-type="info" data-target="info-container">+ Add Info Group</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <!-- Firebase Compat SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
